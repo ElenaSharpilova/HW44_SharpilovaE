@@ -36,6 +36,13 @@ class MyViewHolder(itemView:View) : BaseViewHolder<Any>(itemView) {
                 listener.onItemClick(holder.adapterPosition)
             }
 
+            holder.itemView.run {
+                val button = findViewById<Button>(R.id.button)
+                    button.setOnClickListener {
+                        listener.onButtonClick(holder.adapterPosition)
+                }
+            }
+
             return holder
         }
     }

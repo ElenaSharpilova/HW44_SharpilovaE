@@ -50,7 +50,7 @@ class MyAdapter (private val listener : OnClickListener):RecyclerView.Adapter<Ba
     interface OnClickListener {
         fun onItemClick (position: Int)
         fun onAdClick (position: Int)
-
+        fun onButtonClick (position: Int)
     }
 
 }

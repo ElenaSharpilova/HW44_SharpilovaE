@@ -46,4 +46,9 @@ class FragmentItems: Fragment (R.layout.fragment_items), MyAdapter.OnClickListen
         listener.openBrowser(url)
     }
 
+    override fun onButtonClick(position: Int) {
+        val item = list[position] as Item
+        Toast.makeText(context, item.name, Toast.LENGTH_LONG).show()
+    }
+
 }
